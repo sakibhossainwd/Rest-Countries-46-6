@@ -1,0 +1,10 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#country{
+    border: 1px solid greenyellow;
+    border-radius: 20px;
+    text-align: center;
+}

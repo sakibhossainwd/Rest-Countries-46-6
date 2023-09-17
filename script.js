@@ -7,15 +7,16 @@ const loadCountries = () => {
 const displayCountries = countries => {
     console.log(countries);
     const countriesHTML = countries.map(country => getCountryHTML(country))
-    console.log(country);
-    const constainer = document.getElementById('git')
+    const constainer = document.getElementById('container');
+    constainer.innerHTML = countriesHTML.join(' ');
 }
 
 const getCountryHTML = country => {
     return `
-    <div>
-    <h3>${country}</h3>
-    </div>
+        <div id="country">
+            <h3>${country.name.common}</h3>
+            <img src="${country.flags.png}" alt="">
+        </div>
     `
 
 }
