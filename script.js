@@ -23,3 +23,4 @@ const getCountryHTML = country => {
 
 }
 
+loadCountries();
