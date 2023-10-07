@@ -12,12 +12,24 @@ const displayCountries = countries => {
     const constainer = document.getElementById('container');
     constainer.innerHTML = countriesHTML.join(' ');
 }
+// orginal basic code
+// const getCountryHTML = country => {
+//     return `
+//         <div id="country">
+//             <h3>${country.name.common}</h3>
+//             <img src="${country.flags.png}" alt="">
+//         </div>
+//     `
 
+// }
+
+// destructuring option - 01
 const getCountryHTML = country => {
+    const {name, flags} = country;
     return `
         <div id="country">
-            <h3>${country.name.common}</h3>
-            <img src="${country.flags.png}" alt="">
+            <h3>${name.common}</h3>
+            <img src="${flags.png}" alt="">
         </div>
     `
 
